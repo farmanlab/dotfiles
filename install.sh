@@ -1,15 +1,8 @@
-#!/bin/bash
+DOTPATH=~/.dotfiles
 
-deploy() {
-    echo "deploy"
-}
+for f in .??*
+do
+    [ "$f" = ".git" ] && continue
 
-init() {
-    echo "init"
-}
-
-if [ "$1" = "deploy" -o "$1" = "d" ]; then
-    deploy
-elif [ "$1" = "init" -o "$1" = "i" ; then
-    init
-fi
+    ln -snfv "$DOTPATH/$f" "$HOME"/"$f"
+done
