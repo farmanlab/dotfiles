@@ -1,9 +1,8 @@
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
-source ~/private-repo/git-subrepo/.rc
 
 function gitco() {
     command git fetch --all;
-    command git checkout -b $1 $2;
+    command git checkout -b $1 remotes/$2;
     command git push $3 $1;
     command git branch -u $3/$1; 
 }
@@ -23,3 +22,4 @@ function gitdel-merged() {
 alias gradleref='./gradlew build --refresh-dependencies'
 alias gradlelib='./gradlew assembleRelease uploadArchives'
 alias adbrestart='adb kill-server; adb start-server'
+alias ls='ls -G'
