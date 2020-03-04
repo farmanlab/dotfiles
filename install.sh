@@ -1,4 +1,5 @@
 DOTPATH=~/.dotfiles
+defaults write com.apple.finder AppleShowAllFiles TRUE
 
 for f in .??*
 do
