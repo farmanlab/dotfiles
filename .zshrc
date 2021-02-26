@@ -1,4 +1,8 @@
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/emulator
 
 function gitco() {
     command git fetch --all;
